@@ -5,7 +5,7 @@
 ;---------------------------------------------------------------------------
 
 section                 .data                                 ; setion for storing variables
-text:                   db    "Hey, what is your name?", 10   ; reserve the text to be printed
+text:                   db    "Hey, what is your name? "       ; reserve the text to be printed
 text_len:               equ   $-text                          ; get the length
 greetings:              db    "Hello, ",                      ; reserve the greeting text
 greetings_len:          equ   $-greetings                     ; also with the length
