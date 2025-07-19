@@ -8,11 +8,7 @@
 
 
     section   .text                         ; section for storing the actual code
-_start:     mov       rax, 1
-            mov       rdi, 1
-            mov       rsi, message_str      ; address of the string to the output
-            mov       rdx, message_len      ; number of bytes
-            syscall                         ; execute the operation
+_start:     call _print                     ; calling the print function
 
             mov eax, 4005                   ; move 4005 into eax (lower position or rax)
             mov [data], eax                 ; initialize a variable with 4005
@@ -21,6 +17,12 @@ _start:     mov       rax, 1
             mov       rdi, 0                ; exit code 0
             syscall
 
+_print:     mov       rax, 1                ; function to print hello world
+            mov       rdi, 1
+            mov       rsi, message_str      ; address of the string to the output
+            mov       rdx, message_len      ; number of bytes
+            syscall                         ; execute the operation
+            ret
 
     section   .data                         ; setion for storing variables
 message_str: db       "Hello, World", 10    ; message with newline code
