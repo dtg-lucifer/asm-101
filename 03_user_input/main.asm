@@ -19,10 +19,10 @@ section                 .text                                 ; section for stor
 global                  _start                                ; entry point to the label
 
 
-_start:                 call _print_text                      ; calling the print function
-                        call _get_name
-                        call _print_greetings
-                        call _print_name
+_start:                 call      _print_text                 ; calling the print function
+                        call      _get_name                   ; calling the get name method
+                        call      _print_greetings            ; calling the print greetings method
+                        call      _print_name                 ; calling print name
 
                         mov       rax, 60                     ; system call for exit
                         mov       rdi, 0                      ; exit code 0
