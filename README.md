@@ -40,51 +40,27 @@ The `gdb` debugger is optional but recommended for debugging assembly code.
 
 The repository contains the following examples:
 
-### 01_hello_world
+### [01_hello_world](01_hello_world/README.md)
 
-A basic "Hello, World" program that demonstrates:
+A basic "Hello, World" program that demonstrates printing a string to standard output, basic memory operations, and system calls.
 
-- Printing a string to standard output
-- Basic memory operations
-- System calls
-- Program sections (text, data, bss)
+### [02_extern](02_extern/README.md)
 
-Key concepts:
+An example showing how to interface with C standard library functions, implementing a do-while loop in assembly, and managing the stack frame.
 
-- `syscall` instruction for system calls
-- Text, data, and BSS sections
-- Basic register usage (rax, rdi, rsi, rdx)
+### [03_user_input](03_user_input/README.md)
 
-### 02_extern
+A program that demonstrates reading user input from standard input, processing that input, and using custom subroutines.
 
-An example showing how to interface with C standard library functions:
+### [04_number_to_ascii_char](04_number_to_ascii_char/README.md)
 
-- Using `printf` and `scanf` from the C library
-- Implementing a do-while loop in assembly
-- Managing the stack frame and local variables
+A program that demonstrates converting numeric values to ASCII characters and printing them to the console.
 
-Key concepts:
+### [05_basic_math](05_basic_math/README.md)
 
-- Calling external C functions
-- Stack frame setup and tear down
-- Comparison and conditional jumps
-- Local variable allocation
+A program that demonstrates various arithmetic operations including addition, subtraction, multiplication, and division, with formatted output.
 
-### 03_user_input
-
-A program that demonstrates:
-
-- Reading user input from standard input
-- Processing and storing that input
-- Custom subroutines in assembly
-- Printing the input back to the user
-
-Key concepts:
-
-- Reading from stdin using system calls
-- Implementing and calling custom subroutines
-- Managing memory buffers
-- Register preservation across function calls
+Each example directory contains its own detailed README with a line-by-line explanation of the code.
 
 ## Building and Running
 
@@ -113,34 +89,22 @@ To clean up the build artifacts:
 make clean
 ```
 
-### Example Session
+### Building and Running Examples
 
-Here's what you might see when running the examples:
+Each example can be built and run using the Makefile provided in its directory:
 
 ```bash
-# For the Hello World example
-$ cd 01_hello_world
-$ make
-$ ./bin/main
-Hello, World
+# Navigate to the example directory
+cd 01_hello_world
 
-# For the extern example
-$ cd ../02_extern
-$ make
-$ ./bin/main
-Enter a number: 3
-Looping 0 of 3
-Looping 1 of 3
-Looping 2 of 3
-Looping 3 of 3
+# Build the example
+make
 
-# For the user input example
-$ cd ../03_user_input
-$ make
-$ ./bin/main
-Hey, what is your name? John
-Hello, John
+# Run the example
+./bin/main
 ```
+
+For expected outputs and detailed explanations, see the README.md file in each example directory.
 
 ## Warning
 
