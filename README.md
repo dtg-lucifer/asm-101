@@ -60,6 +60,14 @@ A program that demonstrates converting numeric values to ASCII characters and pr
 
 A program that demonstrates various arithmetic operations including addition, subtraction, multiplication, and division, with formatted output.
 
+### [06_stack_memory](06_stack_memory/README.md)
+
+A program that demonstrates proper memory access techniques, handling different data sizes, and register operations in x86-64 assembly.
+
+### [07_char_string](07_char_string/README.md)
+
+A program that demonstrates working with character data, traversing arrays/lists, and converting numbers to ASCII representations.
+
 Each example directory contains its own detailed README with a line-by-line explanation of the code.
 
 ## Building and Running
